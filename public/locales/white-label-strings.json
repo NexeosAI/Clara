@@ -1,0 +1,41 @@
+{
+  "greeting": "Hello, {name}!",
+  "appTitle": "My White-Label Application",
+  "buttons": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "reload": "Reload Data",
+    "toggleTheme": "Toggle Theme",
+    "switchBrand": "Switch Brand"
+  },
+  "labels": {
+    "username": "Username",
+    "password": "Password",
+    "email": "Email Address",
+    "currentThemeMode": "Current Mode: {mode}",
+    "currentBrand": "Current Brand: {brand}"
+  },
+  "messages": {
+    "welcome": "Welcome to our platform.",
+    "dataLoading": "Loading data, please wait...",
+    "dataLoadedSuccessfully": "Data loaded successfully!",
+    "errorOccurred": "An error occurred: {errorMessage}"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "Overview of your application status."
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "themeOptions": "Theme Options"
+  },
+  "onboarding": {
+    "welcomeStepTitle": "Welcome!",
+    "configStepTitle": "Configuration",
+    "finishStepTitle": "All Set!"
+  },
+  "fallback": {
+    "translationMissing": "[Translation missing for key: {key}]"
+  }
+}

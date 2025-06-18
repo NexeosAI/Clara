@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import './styles/animations.css'; // Import animations
+import './styles/white-label-theme.css';
 // Import the node executors index so all executors get registered
 import './nodeExecutors';
 

@@ -45,6 +45,7 @@ import {
   Edit,
   X
 } from 'lucide-react';
+import { t } from '../i18n'; // Added for i18n
 import { db } from '../db';
 import axios from 'axios';
 import api from '../services/api';
@@ -737,7 +738,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onPageChange }) => {
           {/* Greeting */}
           <div id="greeting-message" className="py-3">
             <h2 className="text-4xl font-extrabold text-gray-800 dark:text-gray-100 font-sans" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.1)', letterSpacing: '-0.01em' }}>
-              Hi, <span className="bg-gradient-to-r from-sakura-500 to-pink-500 bg-clip-text text-transparent">{userName || 'there'}</span> 
+              {t('greeting', { name: '' })}<span className="bg-gradient-to-r from-sakura-500 to-pink-500 bg-clip-text text-transparent">{userName || 'there'}</span>!
             </h2>
           </div>
 

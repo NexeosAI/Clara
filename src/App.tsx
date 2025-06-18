@@ -17,12 +17,15 @@ import N8N from './components/N8N';
 import UIBuilder from './components/UIBuilder';
 import UIProjectViewer from './components/UIProjectViewer';
 import Servers from './components/Servers';
+import { useTheme } from './hooks/useTheme'; // Added
+import { t } from './i18n'; // Added for i18n
 import NodeRegistryDebug from './debug/NodeRegistryDebug';
 import ToolbarDebug from './debug/ToolbarDebug';
 import { db } from './db';
 import { InterpreterProvider } from './contexts/InterpreterContext';
 
 function App() {
+  const { mode, brand, toggleMode, changeBrand } = useTheme(); // Added useTheme
   const [activePage, setActivePage] = useState(() => localStorage.getItem('activePage') || 'dashboard');
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [userInfo, setUserInfo] = useState<{ name: string } | null>(null);
@@ -144,6 +147,17 @@ function App() {
 
   return (
     <InterpreterProvider onPageChange={setActivePage}>
+      {/* Basic Theme Toggler UI - For demonstration */}
+      <div style={{ position: 'fixed', top: 10, right: 10, zIndex: 1000, background: 'rgba(255,255,255,0.8)', padding: '10px', borderRadius: '5px', boxShadow: '0 0 10px rgba(0,0,0,0.2)' }}>
+        <p>{t('labels.currentThemeMode', { mode })}</p>
+        <p>{t('labels.currentBrand', { brand })}</p>
+        <button onClick={toggleMode} style={{ marginRight: '5px', padding: '5px' }}>
+          {t('buttons.toggleTheme')}
+        </button>
+        <button onClick={() => changeBrand(brand === 'default' ? 'brand-alpha' : 'default')} style={{ padding: '5px' }}>
+          {t('buttons.switchBrand')}
+        </button>
+      </div>
       <div className="min-h-screen bg-gradient-to-br from-white to-sakura-100 dark:from-gray-900 dark:to-sakura-100">
         {showOnboarding ? (
           <Onboarding onComplete={handleOnboardingComplete} />
