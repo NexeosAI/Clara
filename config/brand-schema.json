@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Brand Configuration Schema",
+  "description": "Schema for brand-specific configurations",
+  "type": "object",
+  "properties": {
+    "brandName": {
+      "type": "string",
+      "description": "Name of the brand"
+    },
+    "logos": {
+      "type": "object",
+      "description": "Brand logos",
+      "properties": {
+        "main": {
+          "type": "string",
+          "description": "URL or path to the main logo"
+        },
+        "favicon": {
+          "type": "string",
+          "description": "URL or path to the favicon"
+        }
+      },
+      "required": ["main"]
+    },
+    "colorPalettes": {
+      "type": "object",
+      "description": "Color palettes for the brand",
+      "properties": {
+        "primary": {
+          "type": "string",
+          "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+          "description": "Primary color (hex code)"
+        },
+        "secondary": {
+          "type": "string",
+          "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+          "description": "Secondary color (hex code)"
+        },
+        "accent": {
+          "type": "string",
+          "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+          "description": "Accent color (hex code)"
+        }
+      },
+      "required": ["primary", "secondary"]
+    },
+    "textStrings": {
+      "type": "object",
+      "description": "Text strings for the brand",
+      "properties": {
+        "appName": {
+          "type": "string",
+          "maxLength": 50,
+          "description": "Application name"
+        },
+        "tagline": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "Brand tagline"
+        }
+      }
+    },
+    "featureFlags": {
+      "type": "object",
+      "description": "Feature flags for the brand",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    }
+  },
+  "required": ["brandName", "logos", "colorPalettes"]
+}

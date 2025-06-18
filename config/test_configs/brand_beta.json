@@ -1,0 +1,16 @@
+{
+  "brandName": "Beta",
+  "logos": {
+    "main": "https://example.com/logos/beta_main.svg"
+  },
+  "colorPalettes": {
+    "primary": "#333333",
+    "secondary": "#F0F0F0"
+  },
+  "textStrings": {
+    "appName": "BetaSuite"
+  },
+  "featureFlags": {
+    "darkMode": true
+  }
+}

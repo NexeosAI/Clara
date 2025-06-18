@@ -1,0 +1,14 @@
+{
+  "brandName": "Epsilon Solutions",
+  "logos": {
+    "main": "https://epsilon.net/img/logo_main.jpg"
+  },
+  "colorPalettes": {
+    "primary": "#03A9F4",
+    "secondary": "#B3E5FC"
+  },
+  "textStrings": {
+    "appName": "Epsilon Connect"
+  },
+  "featureFlags": {}
+}

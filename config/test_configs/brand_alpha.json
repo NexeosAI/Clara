@@ -1,0 +1,20 @@
+{
+  "brandName": "Alpha",
+  "logos": {
+    "main": "https://example.com/logos/alpha_main.png",
+    "favicon": "https://example.com/logos/alpha_favicon.ico"
+  },
+  "colorPalettes": {
+    "primary": "#FF0000",
+    "secondary": "#00FF00",
+    "accent": "#0000FF"
+  },
+  "textStrings": {
+    "appName": "AlphaApp",
+    "tagline": "The beginning of everything."
+  },
+  "featureFlags": {
+    "enableUserProfile": true,
+    "enableChat": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "brandName": "Gamma Inc.",
+  "logos": {
+    "main": "/assets/gamma_logo.png",
+    "favicon": "/assets/gamma_favicon.png"
+  },
+  "colorPalettes": {
+    "primary": "#4CAF50",
+    "secondary": "#FFFFFF",
+    "accent": "#FFC107"
+  },
+  "textStrings": {
+    "appName": "Gamma Platform",
+    "tagline": "Powering the future."
+  },
+  "featureFlags": {
+    "newDashboard": true,
+    "legacyApiAccess": false
+  }
+}

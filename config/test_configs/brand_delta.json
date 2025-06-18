@@ -1,0 +1,20 @@
+{
+  "brandName": "Delta",
+  "logos": {
+    "main": "https://cdn.delta.com/logo.png"
+  },
+  "colorPalettes": {
+    "primary": "#9C27B0",
+    "secondary": "#E1BEE7",
+    "accent": "#7B1FA2"
+  },
+  "textStrings": {
+    "appName": "Delta Explorer",
+    "tagline": "Discover new horizons."
+  },
+  "featureFlags": {
+    "analyticsModule": true,
+    "reportingModule": true,
+    "exportData": true
+  }
+}
